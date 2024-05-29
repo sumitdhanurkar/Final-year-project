@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum iure minus facere inventore nemo amet excepturi impedit! Facere aut pariatur totam, in reiciendis facilis quam laboriosam aspernatur debitis libero ullam!
+    </p>
+    <button onclick="printPage()">Print</button>
+    <div id="data">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quo illum quia magnam, dicta alias architecto dolorum aut omnis cum odit iusto commodi voluptatem laboriosam earum quaerat iste ad hic.</p>
+    </div>
+    
+</body>
+<script>
+    function printPage(){
+        var body = document.getElementById('body').innerHTML;
+        var data = document.getElementById('data').innerHTML;
+        document.getElementById('body').innerHTML = data;
+        window.print();
+        document.getElementById('body').innerHTML = body;
+    }
+</script>
+</html>
